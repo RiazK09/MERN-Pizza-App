@@ -43,6 +43,12 @@ app.use("/api", userRoutes);
 app.use("/api/pizzas/", pizzasRoute);
 app.use("/api/orders/", ordersRoute);
 
+app.use((req, res, next) => {
+  res.removeHeader("Cross-Origin-Resource-Policy")
+  res.removeHeader("Cross-Origin-Embedder-Policy")
+  next()
+})
+
 // Deployment Code
 const path = require("path");
 if (process.env.NODE_ENV === "production") {
