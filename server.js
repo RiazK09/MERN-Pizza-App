@@ -45,19 +45,14 @@ app.use("/api/orders/", ordersRoute);
 
 // Deployment Code
 const path = require("path");
-// server static assets if in production
-__dirname = path.resolve();
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "/client/build")));
+  app.use(express.static("client/build"));
 
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
-} else {
-  app.get("/", (req, res) => {
-    res.send("API is running...");
-  });
 }
+
 
 // Port
 const PORT = process.env.PORT || 8000;
