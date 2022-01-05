@@ -44,10 +44,24 @@ app.use("/api/pizzas/", pizzasRoute);
 app.use("/api/orders/", ordersRoute);
 
 app.use((req, res, next) => {
-  res.removeHeader("Cross-Origin-Resource-Policy")
-  res.removeHeader("Cross-Origin-Embedder-Policy")
-  next()
-})
+  res.removeHeader("Cross-Origin-Resource-Policy");
+  res.removeHeader("Cross-Origin-Embedder-Policy");
+  next();
+});
+
+app.use(function (req, res, next) {
+  if (process.env.NODE_ENV === "production") {
+    const reqType = req.headers["x-forwarded-proto"];
+    // if not https redirect to https unless logging in using OAuth
+    if (reqType !== "https") {
+      req.url.indexOf("auth/google") !== -1
+        ? next()
+        : res.redirect("https://" + req.headers.host + req.url);
+    }
+  } else {
+    next();
+  }
+});
 
 // Deployment Code
 const path = require("path");
@@ -58,7 +72,6 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
-
 
 // Port
 const PORT = process.env.PORT || 8000;
