@@ -151,7 +151,7 @@ exports.forgotPassword = (req, res) => {
       subject: "PASSWORD RESET LINK",
       html: `
                 <h1>Please use the following link to reset your password</h1>
-                <p>https://pizza-app-mern.herokuapp.com/auth/activate/${token}</p>
+                <p>https://pizza-app-mern.herokuapp.com/auth/password/reset/${token}</p>
                 <hr />
                 <p>This email may contain sensitive information</p>
             `,
