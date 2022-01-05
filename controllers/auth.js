@@ -31,10 +31,9 @@ exports.signup = (req, res) => {
       subject: "ACCOUNT ACTIVATION LINK",
       html: `
                 <h1>Please use the following link to activate your account</h1>
-                <p>${process.env.CLIENT_URL}/auth/activate/${token}</p>
+                <p>https://pizza-app-mern.herokuapp.com/auth/activate/${token}</p>
                 <hr />
                 <p>This email may contain sensitive information</p>
-                <p>${process.env.CLIENT_URL}</p>
             `,
     };
 
@@ -155,7 +154,6 @@ exports.forgotPassword = (req, res) => {
                 <p>${process.env.CLIENT_URL}/auth/password/reset/${token}</p>
                 <hr />
                 <p>This email may contain sensitive information</p>
-                <p>${process.env.CLIENT_URL}</p>
             `,
     };
 
