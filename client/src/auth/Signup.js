@@ -32,7 +32,7 @@ const Signup = () => {
     setValues({ ...values, buttonText: "Submitting" });
     axios({
       method: "POST",
-      url: `api/signup`,
+      url: `/api/signup`,
       data: { name, email, password },
     })
       .then((response) => {

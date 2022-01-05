@@ -36,7 +36,7 @@ const Activate = () => {
     event.preventDefault();
     axios({
       method: "POST",
-      url: `api/account-activation`,
+      url: `/api/account-activation`,
       data: { token },
     })
       .then((response) => {

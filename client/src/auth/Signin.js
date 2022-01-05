@@ -43,7 +43,7 @@ const Signin = ({ history }) => {
     setValues({ ...values, buttonText: "Submitting" });
     axios({
       method: "POST",
-      url: `api/signin`,
+      url: `/api/signin`,
       data: { email, password },
     })
       .then((response) => {

@@ -7,7 +7,7 @@ export const placeOrder = (token, subtotal) => async (dispatch, getState) => {
 
   try {
     const response = await axios.post(
-      `api/orders/placeorder`,
+      `/api/orders/placeorder`,
       {
         token,
         subtotal,
@@ -29,7 +29,7 @@ export const getUserOrders = () => async (dispatch) => {
 
   try {
     const response = await axios.post(
-      `api/orders/getuserorders`,
+      `/api/orders/getuserorders`,
       {
         userid: userDetails._id,
       }
@@ -46,7 +46,7 @@ export const getAllOrders = () => async (dispatch, getState) => {
 
   try {
     const response = await axios.get(
-      `api/orders/getallorders`
+      `/api/orders/getallorders`
     );
 
     dispatch({ type: "GET_ALLORDERS_SUCCESS", payload: response.data });
@@ -58,13 +58,13 @@ export const getAllOrders = () => async (dispatch, getState) => {
 export const deliverOrder = (orderid) => async (dispatch) => {
   try {
     const response = await axios.post(
-      `api/orders/deliverorder`,
+      `/api/orders/deliverorder`,
       { orderid }
     );
     console.log(response);
     alert("Order Delivered");
     const orders = await axios.get(
-      `api/orders/getallorders`
+      `/api/orders/getallorders`
     );
     dispatch({ type: "GET_ALLORDERS_SUCCESS", payload: orders.data });
   } catch (error) {

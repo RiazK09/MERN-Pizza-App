@@ -26,7 +26,7 @@ const Forgot = ({ history }) => {
     setValues({ ...values, buttonText: "Submitting" });
     axios({
       method: "PUT",
-      url: `api/forgot-password`,
+      url: `/api/forgot-password`,
       data: { email },
     })
       .then((response) => {
