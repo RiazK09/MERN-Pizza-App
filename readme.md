@@ -9,6 +9,7 @@ The deployed app can be found [here](https://pizza-app-mern.herokuapp.com/)
 **NOTE:**
 
 - Please utilise the traditional way to login on the Heroku deployment. The Google and Facebook login only works in development.
+- I uploaded the development code to my dropbox - Mentors can use this to test the Google and Facebook Login functionality.
 
 ## Table of Contents:
 
