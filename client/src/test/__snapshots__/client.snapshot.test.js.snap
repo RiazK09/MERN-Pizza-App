@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="text-center"
+>
+  <div
+    className="spinner-border"
+    role="status"
+    style={
+      Object {
+        "height": "100px",
+        "marginTop": "100px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="sr-only"
+    >
+      Loading...
+    </span>
+  </div>
+</div>
+`;

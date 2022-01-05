@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+body,
+html {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Montserrat', sans-serif !important;
+    overflow-x: hidden !important;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+/* <---------- Auth ----------> */
+
+/* <---------- Signin ----------> */
+.SignIn {
+    background-image: url("./images/bg1.svg");
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: 100vh;
+}
+
+/* <---------- Signup ----------> */
+.SignUp {
+    background-image: url("./images/bg2.svg");
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: 100vh;
+}
+
+/* <---------- Core ----------> */
+
+/* <---------- Layout ----------> */
+.active {
+    color: black !important;
+    font-weight: bold !important;
+}
+
+/* <---------- Components ----------> */
+
+/* <---------- Pizza ----------> */
+h1 {
+    font-size: 20px !important;
+}
+
+.img-fluid {
+    width: 350px;
+    height: 220px;
+}
+
+.flex-container {
+    display: flex !important;
+}
+
+select {
+    box-shadow: none !important;
+    border-color: black !important;
+}
+
+/* <---------- Screens ----------> */
+
+/* <---------- App.js ----------> */
+.about {
+    background-image: url("./images/background.jpg");
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: 100vh;
+}
+
+/* <---------- Cartscreen ----------> */
+.fa-plus {
+    color: green;
+    margin: 5px;
+}
+
+.fa-minus {
+    color: red !important;
+    margin: 5px;
+}
+
+.fa-trash {
+    color: red;
+}
+
+.btnPayNow {
+    background-color: lightseagreen;
+    color: white;
+    border: 2px solid lightseagreen;
+    border-radius: 8px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+/* <---------- Registerscreen ----------> */
+input {
+    margin-top: 10px !important;
+    box-shadow: none !important;
+}
+
+.btn1 {
+    background-color: cornflowerblue;
+    color: white;
+    border: 2px solid cornflowerblue;
+    border-radius: 3px;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+/* <---------- Adminscreen ----------> */
+.adminfunctions {
+    padding: 10px;
+    background-color: rgb(1, 1, 77);
+    text-align: center;
+}
+
+.adminfunctions li {
+    list-style-type: none !important;
+    display: inline !important;
+    color: white !important;
+}
+
+.adminfunctions li a {
+    color: white !important;
+    padding: 20px;
+}
+
+/* <---------- Pizzalist ----------> */
+td,
+th,
+tr {
+    text-align: left;
+}
