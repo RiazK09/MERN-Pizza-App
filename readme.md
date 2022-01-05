@@ -229,12 +229,12 @@ To run this project, do the following:
 5. Thereafter, enter git clone, and then paste the URL that you copied earlier. e.g. git clone https://github.com/RiazK09/MERN-Pizza-App.git
 6. Hit enter to create a local clone on your device.
 7. If you go to this new directory, you will find all the project files, ready to be utilised.
-8. Navigate to this directory from the command line interface.
-9. Navigate to both the server and the client directories in the command line interface and type the following to install all of the necessary node modules and dependencies:
+8. Navigate to this directory from the command line interface. Note, the mern-pizza-app directory contains the server along with all backend folders and functionality.
+9. Navigate to both the mern-pizza-app and the client directories in the command line interface and type the following to install all of the necessary node modules and dependencies:
    <br />
    `npm install`
 
-10. In the command line interface, type the following to run the server (backend) and client (frontend) in development mode:
+10. In the command line interface, type the following to run the server (backend contained in the mern-pizza-app directory) and client (frontend) in development mode:
     <br />
     `npm start`
 
@@ -284,7 +284,7 @@ In order to ensure that my application has been appropriately tested, I have cre
 
 - Backend/Server (with Mocha and Chai):
   <br />
-  (Test folder located under the server directory)
+  (Test folder located under the mern-pizza-app directory)
 
 1. Tests whether the server (backend) communicates with the client (frontend).
 2. Tests whether the server gets all the pizzas from the database.
@@ -296,7 +296,7 @@ In order to ensure that my application has been appropriately tested, I have cre
 1. A snapshot test of the 'Loading' component.
 2. A test to see whether the API is working using axios.get (Backend server needs to run in order for this test to take place).
 
-In order to run these tests, navigate to the respective directories (Client or Server) within the command line interface and type the following:
+In order to run these tests, navigate to the respective directories (Client or mern-pizza-app (which contains the server) within the command line interface and type the following:
 <br />
 `npm test`
 
