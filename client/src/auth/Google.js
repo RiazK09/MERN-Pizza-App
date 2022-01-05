@@ -6,7 +6,7 @@ const Google = ({ informParent = (f) => f }) => {
   const responseGoogle = (response) => {
     axios({
       method: "POST",
-      url: `https://pizza-app-mern.herokuapp.com/api/google-login`,
+      url: `http://pizza-app-mern.herokuapp.com/api/google-login`,
       data: { idToken: response.tokenId },
     })
       .then((response) => {
