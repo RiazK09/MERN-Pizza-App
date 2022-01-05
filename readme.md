@@ -294,7 +294,7 @@ In order to ensure that my application has been appropriately tested, I have cre
   (Test folder located within the src folder)
 
 1. A snapshot test of the 'Loading' component.
-2. A test to see whether the API is working using axios.get
+2. A test to see whether the API is working using axios.get (Backend server needs to run in order for this test to take place).
 
 In order to run these tests, navigate to the respective directories (Client or Server) within the command line interface and type the following:
 <br />
