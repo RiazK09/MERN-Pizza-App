@@ -7,7 +7,6 @@ const Google = ({ informParent = (f) => f }) => {
     axios({
       method: "POST",
       url: `https://pizza-app-mern.herokuapp.com/api/google-login`,
-      proxy: true,
       data: { idToken: response.tokenId },
     })
       .then((response) => {
