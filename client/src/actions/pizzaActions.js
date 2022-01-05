@@ -6,7 +6,7 @@ export const getAllPizzas = () => async (dispatch) => {
 
   try {
     const response = await axios.get(
-      `api/pizzas/getallpizzas`
+      `${process.env.REACT_APP_API}/pizzas/getallpizzas`
     );
     dispatch({ type: "GET_PIZZAS_SUCCESS", payload: response.data });
   } catch (error) {
@@ -20,7 +20,7 @@ export const filterPizzas = (searchKey, category) => async (dispatch) => {
   try {
     let filteredPizzas;
     const response = await axios.get(
-      `api/pizzas/getallpizzas`
+      `${process.env.REACT_APP_API}/pizzas/getallpizzas`
     );
     filteredPizzas = response.data.filter((pizza) =>
       pizza.name.toLowerCase().includes(searchKey)
@@ -41,7 +41,7 @@ export const addPizza = (pizza) => async (dispatch) => {
   dispatch({ type: "ADD_PIZZA_REQUEST" });
   try {
     const response = await axios.post(
-      `api/pizzas/addpizza`,
+      `${process.env.REACT_APP_API}/pizzas/addpizza`,
       { pizza }
     );
     console.log(response);
@@ -56,7 +56,7 @@ export const getPizzaById = (pizzaid) => async (dispatch) => {
 
   try {
     const response = await axios.post(
-      `api/pizzas/getpizzabyid`,
+      `${process.env.REACT_APP_API}/pizzas/getpizzabyid`,
       { pizzaid }
     );
     dispatch({ type: "GET_PIZZABYID_SUCCESS", payload: response.data });
@@ -69,7 +69,7 @@ export const editPizza = (editedpizza) => async (dispatch) => {
   dispatch({ type: "EDIT_PIZZA_REQUEST" });
   try {
     const response = await axios.post(
-      `api/pizzas/editpizza`,
+      `${process.env.REACT_APP_API}/pizzas/editpizza`,
       { editedpizza }
     );
     console.log(response);
@@ -83,7 +83,7 @@ export const editPizza = (editedpizza) => async (dispatch) => {
 export const deletePizza = (pizzaid) => async (dispatch) => {
   try {
     const response = await axios.post(
-      `api/pizzas/deletepizza`,
+      `${process.env.REACT_APP_API}/pizzas/deletepizza`,
       { pizzaid }
     );
     alert("Pizza Deleted Successfully");
