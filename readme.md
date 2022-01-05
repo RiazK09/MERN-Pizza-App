@@ -4,7 +4,11 @@
 
 ![About](/client/src/images/About.png)
 
-The deployed app can be found [here](https://itunes-search-app-riaz.herokuapp.com/)
+The deployed app can be found [here](https://pizza-app-mern.herokuapp.com/)
+
+**NOTE:**
+
+- Please utilise the traditional way to login on the Heroku deployment. The Google and Facebook login only works in development.
 
 ## Table of Contents:
 
@@ -343,7 +347,7 @@ It is important to note that Stripe Checkout requires a key for both the client 
 
 ## Deployment
 
-I have deployed my Pizza Delivery web application on [Heroku](https://www.heroku.com/ "Pizza Delivery App").
+I have deployed my Pizza Delivery web application on [Heroku](https://pizza-app-mern.herokuapp.com/ "Pizza Delivery App").
 
 I deployed both the server (backend) and client (frontend) together as both apps can run on the same Heroku dyno.
 

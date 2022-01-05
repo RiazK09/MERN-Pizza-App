@@ -6,6 +6,8 @@ const Google = ({ informParent = (f) => f }) => {
   const responseGoogle = (response) => {
     axios({
       method: "POST",
+      /* In development, replace the url below this comment with the following code:
+      url: `${process.env.REACT_APP_API}/google-login` */
       url: `http://pizza-app-mern.herokuapp.com/api/google-login`,
       data: { idToken: response.tokenId },
     })

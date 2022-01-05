@@ -43,13 +43,14 @@ app.use("/api", userRoutes);
 app.use("/api/pizzas/", pizzasRoute);
 app.use("/api/orders/", ordersRoute);
 
+// CORS extended
 app.use((req, res, next) => {
   res.removeHeader("Cross-Origin-Resource-Policy");
   res.removeHeader("Cross-Origin-Embedder-Policy");
   next();
 });
 
-// Deployment Code
+// ------------ Deployment Code ------------
 const path = require("path");
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
